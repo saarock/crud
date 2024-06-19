@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssignWorkFragment">
+
+    <ImageView
+        android:id="@+id/greenOval"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/green_oval"
+        app:layout_constraintEnd_toStartOf="@+id/yellow_oval"
+        app:layout_constraintTop_toBottomOf="@+id/workTitle"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/tbAssignWork"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/hardBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back5"
+        app:title="Assign work"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:titleTextColor="@color/white" />
+
+    <EditText
+        android:id="@+id/workTitle"
+        android:layout_width="391dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_background_xml"
+        android:ems="10"
+        android:hint="Work Title"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbAssignWork"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="Priority:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workTitle"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/yellow_oval"
+        android:layout_width="54dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/yellow_oval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workTitle"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/redOval"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="156dp"
+        android:src="@drawable/red_oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workTitle"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/datePicker"
+        android:layout_width="94dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/date_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workTitle"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/taskDesc"
+        android:layout_width="373dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="20dp"
+
+        android:background="@drawable/border_background_xml"
+        android:ems="10"
+        android:hint="Work Description..."
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_oval" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:src="@drawable/tick_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskDesc" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="36dp"
+        android:text="Last Date"
+        app:layout_constraintBottom_toTopOf="@+id/taskDesc"
+        app:layout_constraintEnd_toStartOf="@+id/datePicker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

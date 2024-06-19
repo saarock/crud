@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boss_nav_graph"
+    app:startDestination="@id/employeesFragment">
+
+    <fragment
+        android:id="@+id/employeesFragment"
+        android:name="com.example.com.example.todo.EmployeesFragment"
+        android:label="fragment_employees"
+        tools:layout="@layout/fragment_employees" >
+        <action
+            android:id="@+id/action_employeesFragment_to_worksFragment"
+            app:destination="@id/worksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/worksFragment"
+        android:name="com.example.com.example.todo.WorksFragment"
+        android:label="fragment_works"
+        tools:layout="@layout/fragment_works" >
+        <action
+            android:id="@+id/action_worksFragment_to_assignWorkFragment"
+            app:destination="@id/assignWorkFragment" />
+        <action
+            android:id="@+id/action_worksFragment_to_assignWorkFragment2"
+            app:destination="@id/assignWorkFragment" />
+        <argument
+            android:name="employeeData"
+            app:argType="com.example.com.example.todo.models.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignWorkFragment"
+        android:name="com.example.com.example.todo.AssignWorkFragment"
+        android:label="fragment_assign_work"
+        tools:layout="@layout/fragment_assign_work" >
+        <argument
+            android:name="employeeDetail"
+            app:argType="com.example.com.example.todo.models.User" />
+        <action
+            android:id="@+id/action_assignWorkFragment_to_worksFragment"
+            app:destination="@id/worksFragment" />
+    </fragment>
+</navigation>

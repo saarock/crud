@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:circularflow_radiusInDP="1000sp"
+    tools:context=".auth.SignUpActivity">
+
+
+    <EditText
+        android:id="@+id/eName"
+        android:layout_width="305dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter your Name"
+        android:inputType="text"
+        android:textColor="@color/hardBlue"
+        android:textColorHint="@color/hardBlue"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="305dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/hardBlue"
+        android:textColorHint="@color/hardBlue"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberPassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="305dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="23dp"
+        android:drawableEnd="@drawable/hide"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:textColor="@color/hardBlue"
+        android:textColorHint="@color/hardBlue"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberPassword2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberPassword2"
+        android:layout_width="305dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:hint="Confrim your password"
+        android:drawableEnd="@drawable/hide"
+        android:inputType="textPassword"
+        android:textColor="@color/hardBlue"
+        android:textColorHint="@color/hardBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="97dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="306dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="@color/hardBlue"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="56dp"
+        android:text="Already have Account?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="56dp"
+        android:text="Signin"
+        android:textColor="@color/hardBlue"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioGroup
+        android:id="@id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/eName"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="123dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="101dp"
+            android:layout_marginBottom="16dp"
+            android:text="Boss"
+            android:textColor="@color/hardBlue"
+            app:layout_constraintBottom_toTopOf="@+id/eName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Employee"
+            android:textColor="@color/hardBlue"
+            app:layout_constraintBottom_toTopOf="@+id/eName"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="11dp"
+        android:text="Signup"
+        android:textColor="@color/hardBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="135dp"
+        android:layout_height="119dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
